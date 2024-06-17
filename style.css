@@ -1,0 +1,233 @@
+/* Google Fonts link */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    padding: 0 24px;
+    z-index: 2;
+}
+
+nav{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav .logo{
+    font-size: 24px;
+    color: #fff;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    grid-gap: 32px;
+}
+
+nav ul li a{
+    font-size: 20px;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+nav ul li a:hover{
+    color: #1500ff;
+}
+
+nav button{
+    padding: 10px 20px;
+    outline: none;
+    border: 2px solid transparent;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+nav button:hover{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+
+/* Hero Section */
+.hero_section{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/pexels-pixabay-268533.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.hero_section::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero_section.show::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form_container{
+    position: absolute;
+    max-width: 380px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    background-color: #ffffff84;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    padding: 30px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero_section.show .form_container{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.signup_form{
+    display: none;
+}
+
+.form_container.active .signup_form{
+    display: block;
+}
+
+.form_container.active .login_form{
+    display: none;
+}
+
+.form_container .close_btn{
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.form_container h3{
+    font-size: 25px;
+    text-align: center;
+}
+
+.form_container .input_box{
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    height: 50px;
+}
+
+.input_box input{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #000;
+    border-radius: 8px;
+    outline: none;
+    padding: 0 32px;
+}
+
+.input_box input:focus{
+    border-color: #1500ff;
+}
+
+.input_box i{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+.input_box input:focus ~ i{
+    color: #1500ff;
+}
+
+.select_option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.select_option .checkbox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkbox input{
+    accent-color: #1500ff;
+}
+
+.checkbox label{
+    cursor: pointer;
+    user-select: none;
+}
+
+.form_container a{
+    color: #1500ff;
+    font-size: 14px;
+}
+
+.form_container a:hover{
+    text-decoration: underline;
+}
+
+.form_container button{
+    background-color: #1500ff;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-top: 30px;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.form_container button:hover{
+    background-color: #0f0398;
+}
+
+.signup{
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Login & Signup Page</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <nav>
+            <a href="#" class="logo">MicroCoding</a>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+
+            <button id="form_show">Login</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section>
+        <div class="hero_section">
+            <div class="form_container">
+                <i class="fa-solid fa-xmark close_btn"></i>
+                <!-- Login Form -->
+                <div class="login_form">
+                    <form action="#">
+                        <h3>Login</h3>
+
+                        <div class="input_box">
+                            <input type="email" placeholder="Enter your email" required>
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+
+                        <div class="input_box">
+                            <input type="password" placeholder="Enter your password" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+
+                        <div class="select_option">
+                            <span class="checkbox">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">Remember Me</label>
+                            </span>
+                            <a href="#" class="forgot_psw">Forgot Password?</a>
+                        </div>
+
+                        <button>Login</button>
+
+                        <div class="signup">
+                            Don't have an account? <a href="#" id="signup">Signup</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Signup Form -->
+                <div class="signup_form">
+                    <form action="#">
+                        <h3>Signup</h3>
+
+                        <div class="input_box">
+                            <input type="email" placeholder="Enter your email" required>
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+
+                        <div class="input_box">
+                            <input type="password" placeholder="Create your password" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+
+                        <div class="input_box">
+                            <input type="password" placeholder="Confirm your password" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+
+                        <button>Signup</button>
+
+                        <div class="signup">
+                            Already have an account? <a href="#" id="login">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
